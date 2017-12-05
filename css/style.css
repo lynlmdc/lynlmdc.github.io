@@ -416,12 +416,8 @@ h2.tagline {
   .small {
     white-space: nowrap; }
   
-  .p-nav {
+  .p-nav, .items {
     width: 50%; 
-    padding-right: 2%; }
-
- .items {
-    width: 48%; 
     padding-right: 2%; }
 
   .tagline {
