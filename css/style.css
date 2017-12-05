@@ -1,0 +1,614 @@
+/*
+Project Name: LMD Creative Website
+Author: Lyn D'Amato
+*/
+
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+* {
+  -moz-box-sizing: border-box; /* Firexfox */
+  -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+  box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+.alignright {
+  float: right;
+  padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+
+.alignleft {
+  float: left;
+  padding: 0 10px 10px 0; /* note the padding around a left floated image */
+}
+
+/******************************************
+/* BASE STYLES > Skeleton.css
+/*******************************************/
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* UPPER NAV BAR */
+
+#fixed-nav-bar {
+  overflow: hidden
+  background: white;
+  height: 9rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: +1;
+}
+.transparent-bar {
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 2.25rem;
+  clear: both;
+  margin-top: 0px;
+  position: fixed;
+  top: 9rem;
+  width: 100%;
+}
+
+header {
+  background: white;
+}
+
+.nav-logo {
+    float: left;
+}
+
+.logo {
+  width: 186px;
+  margin-top: 22px;
+}
+
+.nav-float {
+  list-style: none;
+  float: right;
+  padding-top: 20px;
+}
+
+nav li {
+  font-size: 2.4rem;
+  color: #5D6261;
+  display: inline-block;
+  padding-left: 40px;
+  padding-top: 5px;
+  position: relative;
+}
+
+nav li a {
+  color: #5D6261;
+}
+
+nav li a:hover {
+  color: #A6CE39;
+}
+nav ul.sub-nav {
+  position: absolute;
+  display: none;
+  margin: 0 0 0 -18px;
+}
+.sub-nav li a {
+  color: #6e7574;
+}
+
+.sub-nav li {
+  font-size: 1.75rem;
+  background-color: white;
+  width: 100%;
+  height: auto;
+  margin-bottom: -3px;
+  padding: 5px 25px 5px 20px;
+  white-space: nowrap;
+  z-index: 100;
+}
+.sub-nav li:last-child {
+  padding-bottom: 15px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+/* START boilerplate css for hamburger */
+
+.hamburger .line{
+  width: 36px;
+  height: 4px;
+  background: #7d7f7f;
+  margin-top: 6px;
+}
+.hamburger .line:first-of-type{
+  margin-top: 32px;
+}
+/* END boilerplate css for hamburger */
+
+/* MAIN CONTENT */
+
+#main-content {
+  margin-top: 80px;
+}
+#intro {
+  background: url(../images/hero-2.jpg)center center no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  height: auto;
+}
+.tagline {
+  padding: 390px 0 40px 0;
+  clear: both;
+  color: #557E98;
+  font-size: 5.75rem;
+  line-height: 6.5rem;
+}
+.plus {
+  font-weight: 500;
+  color: #A6CE39;
+}
+h3 {
+  font-weight: 300;
+}
+h3, h4 {
+  letter-spacing: .15rem;
+}
+#portfolio {
+  background-color: #2F474E;
+
+}
+#portfolio h3 {
+  color: #A6CE39;
+  padding: 60px 0 35px 0;
+}
+
+/* p-nav start */
+/* -------------------------*/
+
+.p-nav {
+  position: relative;
+}
+.p-nav-name {
+  position: absolute;
+  top: 39%;
+  width: 100%;
+  text-align: center;
+}
+h4.p-nav-name.two-line {
+  position: absolute;
+  top: 36%;
+  width: 100%;
+  text-align: center;
+  line-height: 120%;
+}
+
+h4.p-nav-name{
+  font-weight: 200;
+  color: #A6CE39;
+}
+.p-nav-name a {
+  color: #A6CE39;
+}
+/* -------------------------*/
+/* p-nav end */
+
+#portfolio img {
+  max-width: 100%;
+}
+.row {
+  margin: 0 0 .6% 0;
+}
+.row:last-child {
+ margin-bottom: 60px;
+}
+
+#about {
+  background-color: #000;
+}
+#about h3 {
+  color: #A6CE39;
+  padding: 50px 0 15px 0;
+}
+.about p {
+  color: rgb(150, 150, 150);
+}
+.about img {
+  width: 80%;
+  max-width: 215px;
+  margin-top: 10px;
+  margin-bottom: 3rem;
+}
+.name {
+  font-weight: bold;
+}
+
+#connect {
+  background-color: #A6CE39;
+  height: auto;
+}
+#connect h3 {
+  color: #2F474E;
+  padding: 50px 0 5px 0;
+}
+#connect p {
+  color: #2F474E;
+}
+form .six.columns:first-child {
+  margin-left: 0%;
+}
+form .six.columns {
+  margin-left: 4%;
+}
+
+#footer {
+  background-color: #E2E3E4;
+}
+.icon img {
+  width: 30px;
+  height: auto; 
+  float: left;
+  padding-top: 30px;
+  margin-right: 12px;
+}
+.signoff p {
+  font-size: 1.5rem;
+  padding-top: 34px;
+}
+.row.signoff {
+  margin-bottom: 10px;
+}
+
+/* PORTFOLIO full pages
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+#portfolio-full {
+  background-color: #2F474E;
+  color: #A6CE39;
+  padding: 150px 0 8% 0;
+  height: auto;
+}
+.small {
+  color: #BCBEC0;
+  font-size: 2.2rem;
+  font-weight: 300;
+}
+.portfolio-full.first img {
+  padding-top: 25px;
+}
+.portfolio-full img{
+  width: 100%;
+  height: 100%;
+  margin-bottom: -10px;
+  margin-top: 0;
+}
+
+/* IDENTITIES full pages
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+#identities {
+  background-color: #ebebec;
+  padding: 150px 0 8% 0;
+  height: auto;
+}
+.identities h3 {
+  color: #557e98;
+}
+.identities h3 .small {
+  color: #2f474e;
+}
+.one-third.columns {
+  background-color: white;
+  width: 33%;
+  margin-left: .3%;
+}
+.first-row {
+  margin-top: 45px;
+  margin-bottom: .3%;
+}
+.logo-row {
+  margin-bottom: .3%;
+}
+.logo-row:last-child {
+  margin-bottom: 0;
+}
+
+/* Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/*
+Note: The best way to structure the use of media queries is to create the queries
+near the relevant code. For example, if you wanted to change the styles for buttons
+on small devices, paste the mobile query code up in the buttons section and style it
+there.
+*/
+
+@media (max-width: 400px) and (min-width:318px) {
+h2.tagline {
+  padding-top: 310px;
+  padding-bottom: 20px;
+  font-size: 3rem;
+  line-height: 3.75rem;
+  letter-spacing: -.1rem; }
+
+  .small {
+    white-space: nowrap; }
+}
+
+/* Larger than mobile */
+@media (max-width: 550px) {
+
+  .nav-logo {
+    float: left; }
+
+  .logo {
+    margin-top: 25px; 
+    margin-bottom: 0; 
+    width: 175px; }
+
+  .hamburger{
+    display: block;
+    float: right; }
+
+  /* MOBILE NAV */
+
+  .nav-float {
+    background: rgba(0, 0, 0, 0.9);
+    clear: both;
+    float: none; 
+    padding-left: 65px;
+    margin-left: -65px;
+    position: absolute;
+    top: 9rem; 
+    width: 150%; }
+
+  .nav-float li {
+    top: 1.5rem;
+    border-bottom: 1px solid #292929;
+    width: 100%; 
+    margin: 0; 
+    padding-left: 0;
+    padding-top: .5rem; 
+    padding-bottom: .75rem; }
+
+  .nav-float li:last-child {
+    border-bottom: none; } 
+
+  .nav-float ul {
+    margin-bottom: 20px; }   
+
+  nav ul.sub-nav {
+    position: relative;
+    margin-left: 0px; 
+    margin-top: 0; }
+
+  .sub-nav li {
+    background: rgba(0, 0, 0, 0.0);
+    margin-top: 0; }
+
+  .sub-nav li:last-child {
+    border-bottom: none; 
+    padding-bottom: 40px; }
+
+  nav li a {
+    color: #7c7f7f; }
+
+  
+
+  /* END MOBILE NAV */
+
+  .small {
+    white-space: nowrap; }
+  
+  .p-nav, .items {
+    width: 50%; 
+    padding-right: 2%; }
+
+  .tagline {
+    font-size: 3.7rem;
+    line-height: 4.5rem; 
+    letter-spacing: -.1rem; 
+    padding: 375px 0 35px 0; }
+
+  .row {
+    margin: 0 0 .2% 0; }
+
+  #about img {
+    display: none; }
+
+  h4.p-nav-name {
+    font-size: 2.2rem; }
+
+  form .six.columns {
+    margin-left: 0%; }
+
+  #about p, #connect p {
+    font-size: 1.8rem; }
+
+  #portfolio-full {
+    padding: 150px 0 8% 0; }
+
+  #identities {
+    padding: 150px 0 8% 0; }
+
+  #identities .logo-items {
+    width: 49.5%; }
+
+  #identities .logo-items:last-child {
+    display: none; }
+
+}
+
+/* Larger than tablet */
+@media screen and (max-width:750px) and (min-width:550px) {
+
+  .nav-logo {
+    float: left; }
+
+  .logo {
+    margin-top: 25px; 
+    margin-bottom: 0; 
+    width: 175px; }
+
+  .hamburger {
+    display: block;
+    float: right; }
+
+  /* MOBILE NAV */
+
+  .nav-float {
+    background: rgba(0, 0, 0, 0.9);
+    /* display: none; */
+    clear: both;
+    float: none; 
+    padding-left: 75px;
+    margin-left: -75px;
+    position: absolute;
+    top: 9rem; 
+    width: 150%; }
+
+  .nav-float li {
+    top: 1.5rem;
+    border-bottom: 1px solid #292929;
+    width: 100%; 
+    margin: 0; 
+    padding-left: 0;
+    padding-top: .5rem; 
+    padding-bottom: .75rem; }
+
+  .nav-float li:last-child {
+    border-bottom: none; } 
+
+  .nav-float ul {
+    margin-bottom: 20px; }   
+
+  nav ul.sub-nav {
+    position: relative;
+    margin-left: 0px; 
+    margin-top: 0; }
+
+  .sub-nav li {
+    background: rgba(0, 0, 0, 0.0);
+    margin-top: 0; }
+
+  .sub-nav li:last-child {
+    border-bottom: none; 
+    padding-bottom: 40px; }
+
+  nav li a {
+    color: #7c7f7f; }
+
+  .sub-nav li a {
+    color: #7c7f7f; }
+
+  .sub-nav li a:hover {
+    color: #a6ce39; }
+
+  /* END MOBILE NAV */
+
+  .p-nav, .items {
+    width: 50%; 
+    padding-right: 2%;}
+
+  .tagline {
+    font-size: 4.85rem;
+    line-height: 5.5rem; 
+    letter-spacing: -.1rem; }
+
+  .row {
+    margin: 0 0 .2% 0; }
+
+  #about img {
+    width: 30%; 
+    padding-bottom: 20px; 
+    margin-bottom: 0 }
+
+  .p-nav-name a h4 {
+    font-size: 2.5rem; }
+
+  form .six.columns {
+    margin-left: 0%; }
+
+  #portfolio-full {
+    padding: 150px 0 8% 0; }
+
+  #identities {
+    padding: 150px 0 8% 0; }
+
+  #identities .logo-items {
+    width: 49.5%; }
+
+  #identities .logo-items:last-child {
+    display: none; }
+
+}
+
+
+/* Larger than mobile */
+@media (min-width: 300px) {
+  h4.p-nav-name {
+    font-size: 1.8rem; }
+}
+
+@media (min-width: 400px) {
+  h4.p-nav-name {
+    font-size: 2.2rem; }
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+  h4.p-nav-name {
+    font-size: 2.7rem; }
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+  h4.p-nav-name {
+    font-size: 1.9rem; }
+
+  .hamburger {
+    display: none; }
+}
+
+@media (min-width: 950px) {
+  h4.p-nav-name {
+    font-size: 2.2rem; }
+}
+
+/* Larger than desktop */
+@media (min-width: 1100px) {
+  h4.p-nav-name {
+    font-size: 2.5rem; }
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1400px) {
+   h4.p-nav-name {
+    font-size: 2.8rem; }
+}
+/* capture all screens smaller than 750px*/
+@media screen and (max-width:750px) {
+  .nav-float{
+    display: none; }
+
+  .nav-float.show {
+    display: block; }
+
+}
+
